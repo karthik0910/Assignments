@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your chances for Admission</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label for="crim">CRIM:</label><br>
+            <input type="number" step="any" name="crim" id="crim"><br><br>
+            <label for="zn">ZN:</label><br>
+            <input type="number" step="any" name="zn" id="zn"><br><br>
+            <label for="indus">INDUS:</label><br>
+            <input type="number" step="any" name="indus" id="indus"><br><br>
+            <label for="chas">CHAS:</label><br>
+            <input type="number" step="any" name="chas" id="chas"><br><br>
+            <label for="nox">NOX:</label><br>
+            <input type="number" step="any" name="nox" id="nox"><br><br>
+            <label for="rm">RM:</label><br>
+            <input type="number" step="any" name="rm" id="rm"><br><br>
+            <label for="age">Age:</label><br>
+            <input type="number" step="any" name="age" id="age"><br><br>
+            <label for="dis">DIS:</label><br>
+            <input type="number" step="any" name="dis" id="dis"><br><br>
+            <label for="tax">TAX:</label><br>
+            <input type="number" step="any" name="tax" id="tax"><br><br>
+            <label for="ptratio">PTRatio:</label><br>
+            <input type="number" step="any" name="ptratio" id="ptratio"><br><br>
+            <label for="b">B:</label><br>
+            <input type="number" step="any" name="b" id="b"><br><br>
+            <label for="lstat">LSTAT:</label><br>
+            <input type="number" step="any" name="lstat" id="lstat"><br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
