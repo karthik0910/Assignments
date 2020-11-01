@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Income Prediction</h1>
+
+    <div class="form">
+        <p>Upload xlsx format file</p>
+        <form action="{{ url_for('data')}}" method="POST">
+            <input type="file"  name="filename" value = "">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

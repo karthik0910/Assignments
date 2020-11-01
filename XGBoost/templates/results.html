@@ -1,0 +1,25 @@
+
+<body>
+  <header>
+      <h2 class="align_head">Income Prediction</h2>
+  </header>
+
+<h3> Prediction of the Uploaded Incidents are completed </h3>
+
+
+<p>Prediction of first five rows</p>
+
+<p> Prediction of Income is performed after Imputing the NA values and encoding the Categorical Data </p>
+
+
+
+{{data| safe}}
+
+
+
+<p>Click here to download the file</p>
+
+<form action="{{ url_for('download')}}" method="POST">
+            <button type="submit" value="predict" class="btn btn-primary btn-lg">Download Prediction</button>
+        </form>
+</body>
